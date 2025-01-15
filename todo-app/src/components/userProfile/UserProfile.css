@@ -1,0 +1,26 @@
+.user-profile {
+    text-align: center;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.task-filters {
+    list-style: none;
+    padding: 0;
+}
+
+.task-filters li {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.task-filters li:hover {
+    background-color: #ccc;
+}
