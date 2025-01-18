@@ -1,0 +1,48 @@
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-input form {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to top, rgba(53, 121, 55, 0.1), rgba(208, 255, 210, 0.1));
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.task-input button {
+    background-color: rgba(53, 121, 55, 0.16);
+    color: rgba(53, 121, 55, 1);
+    font-weight: bolder;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-input .icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.3rem;
+    background-color: transparent;
+}
+
+.form-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}

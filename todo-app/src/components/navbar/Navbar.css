@@ -1,0 +1,22 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px;
+}
+
+.navbar-container>div{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 0px;
+}
+
+.navbar-container h2{
+    margin: 0px;
+}
+
+.nvb-icon{
+    font-size: larger;
+    cursor: pointer;
+}

@@ -1,22 +1,75 @@
-.app-container {
+html, body {
+  height: 100%; /* Ensure the html and body take full height */
+  margin: 0;
+  /* overflow-y: hidden; */
+  scroll-behavior: smooth;
+}
+
+.app {
   display: flex;
-  height: 100vh;
-  background-color: #f7f7f7;
+  flex-direction: column;
+  padding:0px 8px;
+  flex: 1;
 }
 
-.left-sidebar {
-  width: 20%;
-  padding: 20px;
-  background-color: #eaeaea;
+.app-container {
+  height: 100vh; /* Full viewport height for the app container */
+  display: flex;
+  flex-direction: column;
 }
 
-.task-container {
-  width: 60%;
-  padding: 20px;
+/* Default: mobile-first */
+.sidebar {
+  display: none;
 }
 
 .right-sidebar {
-  width: 20%;
-  padding: 20px;
-  background-color: #eaeaea;
+  display: none;
+}
+
+/* Tablet and up (768px) */
+@media (min-width: 768px) {
+  .app {
+    display: grid;
+    grid-template-columns: 1fr; /* Main content full width by default */
+  }
+
+  .sidebar-open {
+    grid-template-columns: 200px 1fr; /* When left sidebar is open */
+    gap: 12px;
+  }
+  
+  .right-sidebar-open {
+    grid-template-columns: 0.5fr 0.5fr; /* When right sidebar is open */
+    gap: 12px;
+  }
+  
+  .sidebar-open.right-sidebar-open {
+    grid-template-columns: 200px 1fr 250px; /* Both sidebars open */
+    gap: 12px;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .right-sidebar {
+    display: block;
+  }
+}
+
+/* Desktop and up (1024px) */
+@media (min-width: 1024px) {
+  .app.sidebar-open.right-sidebar-open {
+    grid-template-columns: 300px 1fr 400px; /* Both sidebars open on larger screens */
+    gap: 12px;
+  }
+
+  .app.sidebar-open {
+    grid-template-columns: 300px 1fr; /* Sidebar open, no right sidebar */
+  }
+
+  .app.right-sidebar-open {
+    grid-template-columns: 1fr 400px; /* Only right sidebar open */
+  }
 }

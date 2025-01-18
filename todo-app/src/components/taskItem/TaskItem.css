@@ -1,0 +1,39 @@
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+    background-color: transparent;
+    border-top: 1px solid rgba(73, 110, 75, 0.2);
+}
+
+.task-item input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+
+.task-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.imp-btn {
+    background-color: transparent;
+    padding: 0px 4px;
+    border: none;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.task-left{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+}

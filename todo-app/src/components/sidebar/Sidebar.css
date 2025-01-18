@@ -1,0 +1,53 @@
+.sidebar-container {
+    background-color: rgba(238, 246, 239, 1);
+    padding: 0px 12px;
+    margin-top: 24px;
+}
+
+.sidebar-container ul {
+    list-style: none;
+    margin-top: 0px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sidebar-container ul,div{
+    background-color: rgba(251, 253, 252, 1);
+}
+
+.sidebar-container ul li {
+    width: 100%;
+}
+
+.list-task {
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.list-task:hover{
+    background-color: #a7a7a7;
+}
+
+.list-task>p{
+    margin: 0px;
+    font-size: medium;
+}
+
+.list-icons {
+    font-size:x-large;
+}
+
+.add-list{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 0px 12px ;
+}

@@ -1,28 +1,40 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import './TaskItem.css';  // CSS specific to this component
+import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 
-const TaskItem = ({ task }) => {
+const TaskItem = ({ task, setShowRightSidebar, setClickedTask }) => {
     const dispatch = useDispatch();
 
     const handleCompleteToggle = () => {
-        dispatch({ type: 'TOGGLE_TASK', payload: task.id });
+        dispatch({ type: 'TOGGLE_OR_UPDATE_TASK', payload: { id: task.id, isCompleted: true }, });
     };
 
-    const handleDelete = () => {
-        dispatch({ type: 'DELETE_TASK', payload: task.id });
-    };
+    const handleSetImportant = () => {
+        dispatch({ type: 'TOGGLE_OR_UPDATE_TASK', payload: { id: task.id, updatedFields: { isImportant: !task.isImportant } } });
+    }
 
     return (
-        <div className={`task-item ${task.completed ? 'completed' : ''}`}>
-            <input
-                type="checkbox"
-                checked={task.completed}
-                onChange={handleCompleteToggle}
-            />
-            <span>{task.text}</span>
-            <span className="priority">{task.priority}</span>
-            <button onClick={handleDelete}>Delete</button>
+        <div className={`task-item ${task.isCompleted ? 'completed' : ''}`} >
+            <div className="task-left" onClick={() => {
+                setClickedTask(task)
+                setShowRightSidebar(true)
+            }}>
+                <input
+                    type="checkbox"
+                    checked={task.isCompleted}
+                    onChange={handleCompleteToggle}
+                    className="task-checkbox"
+                />
+                <span className={`task-text ${task.completed ? 'completed-text' : ''}`}>
+                    {task.text}
+                </span>
+            </div>
+            <div className="task-right">
+                <button className="imp-btn" onClick={handleSetImportant}>
+                    {task.isImportant ? <IoIosStar /> : <IoIosStarOutline />}
+                </button>
+            </div>
         </div>
     );
 };

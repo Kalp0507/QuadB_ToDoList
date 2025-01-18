@@ -1,0 +1,139 @@
+/* Container for the right sidebar */
+.right-sidebar-container {
+    background-color: rgba(238, 246, 239, 1);
+    height: 100%;
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bgtr{
+    background-color: transparent;
+}
+
+.top-border{
+    border-top: 1px solid rgba(73, 110, 75, 0.2);
+}
+
+/* Task header (Title and Star) */
+.task-header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 0px;
+}
+
+.task-title {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.task-title input {
+    margin-right: 10px;
+}
+
+.star-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Task Options (Add Step, Set Reminder, etc.) */
+.task-options {
+    background-color: transparent;
+}
+
+.task-option {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.inner-option-box {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.task-option .icon {
+    margin-right: 10px;
+    color: #666;
+}
+
+.task-option span {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Task Notes Section */
+.task-notes{
+    background-color: transparent;
+}
+
+.task-notes textarea {
+    width: fit-content;
+    height: 100px;
+    margin-top: 16px;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    border-radius: 4px;
+    resize: none;
+    font-size: 1rem;
+}
+
+/* Footer Section */
+.task-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 0px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.save-btn{
+    width: 100%;
+    background-color: rgba(53, 121, 55, 0.16);
+    color: rgba(53, 121, 55, 1);
+    border-radius: 4px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.created-date {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+}

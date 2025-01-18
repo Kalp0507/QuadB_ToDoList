@@ -1,0 +1,10 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.task-list p {
+    text-align: center;
+    color: gray;
+}

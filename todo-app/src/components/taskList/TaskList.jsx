@@ -3,14 +3,19 @@ import { useSelector } from 'react-redux';
 import TaskItem from '../taskItem/TaskItem';
 import './TaskList.css';  // CSS specific to this component
 
-const TaskList = () => {
+const TaskList = ({ setShowRightSidebar, setClickedTask }) => {
     const tasks = useSelector((state) => state.tasks);
+    console.log(tasks.tasks)
 
     return (
         <div className="task-list">
-            {tasks.length > 0 ?
-                (tasks.map((task) => <TaskItem key={task.id} task={task} />)) :
-                (<p>No tasks available.</p>)}
+            {tasks.tasks.length > 0 ? (
+                tasks.tasks.map((task,index) => (
+                    <TaskItem key={index} task={task} setShowRightSidebar={setShowRightSidebar} setClickedTask={setClickedTask}/>
+                ))
+            ) : (
+                <p>No tasks available.</p>
+            )}
         </div>
     );
 };
